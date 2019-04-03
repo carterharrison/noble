@@ -3,7 +3,7 @@ var noble = require('../index');
 
 var peripheralIdOrAddress = process.argv[2].toLowerCase();
 
-console.log(noble.enable())
+noble.enable()
 noble.on('stateChange', function(state) {
   if (state === 'poweredOn') {
     noble.startScanning();
